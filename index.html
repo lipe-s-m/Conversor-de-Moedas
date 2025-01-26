@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use esse site para converter moedas">
+    <title>Conversor de Moeda</title>
+    <link rel="stylesheet" href="/assets/css/pages/index/style.css">
+    <base href="assets/">
+</head>
+
+<body>
+    <main>
+        <section id="formulario">
+            <form method="get" target="_blank" id="form">
+                <div id="header">
+                    <h1>Converter Moedas</h1> <input id="reset" type="reset" value="Limpar Campos" />
+                </div>
+
+                <section id="escolha-moedas">
+                    <div>
+                        <label for="moeda-A">De:</label>
+                        <select name="moeda_A" id="moeda-A" required>
+                            <option value="" selected disabled hidden>Moeda origem</option>
+                            <option value="BRL">Real</option>
+                            <option value="USD">Dólar Americano</option>
+                            <!-- <option value="EUR">Euro</option> -->
+                            <option value="BTC">Bitcoin</option>
+                            <option value="JPY">Iene</option>
+                            <option value="CAD">Dólar Canadense</option>
+                            <option value="ARS">Peso Argentino</option>
+                        </select>
+
+                    </div>
+
+                    <span>X</span>
+                    <div>
+                        <label for="moeda-B">Para:</label>
+                        <select name="moeda_B" id="moeda-B" required disabled>
+                            <option value="" selected disabled hidden>Moeda destino</option>
+                            <option value="BRL">Real</option>
+                            <option value="USD">Dólar</option>
+                            <option value="EUR">Euro</option>
+                            <option value="CAD">Dólar Canadense</option>
+                            <option value="ARS">Peso Argentino</option>
+                        </select>
+
+                    </div>
+                </section>
+
+                <div id="label-valor-moeda" class="hidden">
+                    <div>
+                        <label for="nome">Valor moeda A</label>
+                        <input type="number" step="0.01" min="0" id="nome" name="quantidade_moeda_A" value="1.00" required>
+                    </div>
+                    <div id="botoes">
+                        <button class="botao-soma" type="button">+1</button>
+                        <button class="botao-soma" type="button">+5</button>
+                        <button class="botao-soma" type="button">+10</button>
+                        <button class="botao-soma" type="button">+100</button>
+
+                    </div>
+                </div>
+                <div id="label-data">
+                    <label for="date">Data</label>
+                    <input type="date" name="data" id="date" default required>
+                </div>
+                <button type="submit">Converter</button>
+        </section>
+        </form>
+
+
+        <section id="resposta">
+            <img src="./images/illustration-empty.svg" alt="Icone calculadora">
+            <h2>Os resultados aparecerão aqui</h2>
+            <p id="moedas-selecionadas">Selecione as moedas de origem e destino</p>
+        </section>
+    </main>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/api.js"></script>
+</body>
+
+</html>

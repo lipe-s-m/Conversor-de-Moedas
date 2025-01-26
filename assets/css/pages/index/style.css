@@ -1,0 +1,21 @@
+@import url("./../../global/global.css");
+@import url("./partials/partials.css");
+
+html {
+    background-color: var(--slate100);
+
+}
+
+main {
+    width: 60vw;
+    display: flex;
+    background-color: var(--white);
+    border-radius: 30px;
+
+}
+
+#formulario,
+#resposta {
+    width: 100%;
+    padding: 3rem;
+}
