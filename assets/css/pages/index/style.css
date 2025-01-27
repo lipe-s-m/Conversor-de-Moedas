@@ -3,19 +3,24 @@
 
 html {
     background-color: var(--slate100);
-
 }
 
 main {
-    width: 60vw;
+    width: 64vw;
     display: flex;
     background-color: var(--white);
     border-radius: 30px;
-
 }
 
 #formulario,
 #resposta {
     width: 100%;
     padding: 3rem;
+}
+
+input:hover,
+select:hover,
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }

@@ -2,14 +2,14 @@ import { formatarNumero } from "./api.js";
 
 const moedaA = document.getElementById("moeda-A")
 const moedaB = document.getElementById("moeda-B")
-const reset = document.getElementById("reset")
 const inputData = document.getElementById("date");
+const reset = document.getElementById("reset")
 const labelValorMoedaA = document.getElementById("label-valor-moeda");
 const inputValorMoedaA = document.getElementById("nome");
 const textoMoedaSelecionada = document.getElementById("moedas-selecionadas")
 const imagemCalculadora = document.getElementById("resposta").querySelector("img");
 const h2 = document.getElementById("resposta").querySelector("h2");
-const sectionResposta = document.getElementById("resposta");
+const sectionResposta = document.querySelector(".dados-resposta");
 const botoes = document.querySelectorAll(".botao-soma")
 const form = document.getElementById("form")
 
@@ -22,7 +22,7 @@ const dataAtual = hoje.toISOString().split('T')[0];
 inputData.value = dataAtual;
 
 let dataSelecionada = dataAtual;
-const conversoes = [];
+export const conversoes = [];
 
 const allOptionsMoedaA = Array.from(moedaA.options).map(option => ({
     value: option.value,
@@ -88,14 +88,15 @@ export const alterarTexto = (resultadoConversao = null) => {
             document.getElementById("ultimoResultado").remove();
         }
         const result = document.createElement("h2");
-        result.innerText = resultadoConversao;
-        result.classList = "resultadoConversao";
-        result.id = "ultimoResultado";
         const simboloMoedaA = funcaoSimboloMoeda(nomeMoedaA);
         const simboloMoedaB = funcaoSimboloMoeda(nomeMoedaB);
-        sectionResposta.append(result)
-        armazenarNoHistorico(simboloMoedaA.logo, simboloMoedaB.logo, valorMoedaA, resultadoConversao)
+
+        result.innerText = `${simboloMoedaB.logo} ${resultadoConversao}`;
+        result.classList = "resultadoConversao";
+        result.id = "ultimoResultado";
+        sectionResposta.insertBefore(result, sectionResposta.firstChild)
         textoMoedaSelecionada.innerText = `Você converteu ${simboloMoedaA.logo} ${formatarNumero(Number(valorMoedaA).toFixed(2))} pra ${simboloMoedaB.nome}, com base no dia ${dataSelecionada}`
+        armazenarNoHistorico(simboloMoedaA.logo, simboloMoedaB.logo, simboloMoedaB.nome, valorMoedaA, resultadoConversao)
     }
 
     // atualizacoes nos inputs
@@ -158,14 +159,15 @@ function funcaoSimboloMoeda(moeda) {
     }
 }
 
-function armazenarNoHistorico(moedaA, moedaB, valorMoedaA, resultado) {
+function armazenarNoHistorico(moedaA, moedaB, nomeMoedaB, valorMoedaA, resultado) {
     const conversao = {
         moedaOrigemA: moedaA,
         moedaDestinoB: moedaB,
+        nomeMoedaB: nomeMoedaB,
         quantidadeMoedaA: valorMoedaA,
         resultadoConversao: resultado,
     }
     conversoes.push(conversao)
 
-    sessionStorage.setItem(`conversao${conversoes.length}`, JSON.stringify(conversao));
+    // sessionStorage.setItem(`${conversoes.length}`, JSON.stringify(conversao));
 }

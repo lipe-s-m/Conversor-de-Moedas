@@ -1,0 +1,44 @@
+#background-modal.hidden {
+    display: none;
+}
+
+#background-modal {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2.4px);
+}
+
+#modal {
+    z-index: 4;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 3rem 3rem;
+    border-radius: 30px;
+    gap: 1.6rem;
+}
+
+#modal h3 {
+    color: var(--slate900);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+hr {
+    border: solid, 1px, var(--slate900);
+    opacity: 0.4;
+}
+
+#botao-fechar-modal {
+    background-color: var(--slate500);
+    color: var(--white);
+}

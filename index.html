@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Use esse site para converter moedas">
     <title>Conversor de Moeda</title>
+    <meta name="description" content="Converta de forma fácil e rápida as moedas mais famosas do mundo!">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icon2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icon2/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/icon2/site.webmanifest">
     <link rel="stylesheet" href="/assets/css/pages/index/style.css">
     <base href="assets/">
 </head>
@@ -72,13 +76,26 @@
 
 
         <section id="resposta">
-            <img src="./images/illustration-empty.svg" alt="Icone calculadora">
-            <h2>Os resultados aparecerão aqui</h2>
-            <p id="moedas-selecionadas">Selecione as moedas de origem e destino</p>
+            <button id="historico">Histórico</button>
+            <div class="dados-resposta">
+                <img src="./images/illustration-empty.svg" alt="Icone calculadora">
+                <h2>Os resultados aparecerão aqui</h2>
+                <p id="moedas-selecionadas">Selecione as moedas de origem e destino</p>
+            </div>
+
         </section>
+
+        <div id="background-modal" class="hidden">
+            <section id="modal">
+                <h3>Conversões anteriores</h3>
+                <hr>
+                <button type="button" id="botao-fechar-modal">Fechar</button>
+            </section>
+        </div>
     </main>
     <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/api.js"></script>
+    <script type="module" src="./js/modal.js"></script>
 </body>
 
 </html>

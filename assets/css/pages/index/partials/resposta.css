@@ -7,8 +7,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+}
+
+#resposta #historico {
+    background-color: transparent;
+    color: var(--lime);
+    align-self: flex-end;
+    padding: 0;
+    width: auto;
+    justify-self: flex-start;
+    /* pra subir a posicao dele: */
+    text-decoration: underline;
+}
+
+#resposta .dados-resposta {
+    /* Faz com que o espaço restante seja ocupado, empurrando os outros elementos para baixo */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #resposta img {
@@ -20,7 +40,6 @@
 }
 
 .resultadoConversao {
-    order: -1;
     color: var(--lime);
     font-weight: 700;
     font-size: 40px;
