@@ -18,24 +18,52 @@
 
 #modal {
     z-index: 4;
+    overflow-y: auto;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     padding: 2rem 3rem 3rem;
     border-radius: 30px;
-    gap: 1.6rem;
+    gap: 1.2rem;
+    max-width: 30rem;
+    width: 44vw;
+    min-width: 26rem;
+    max-height: 80vh;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
 }
 
 #modal h3 {
     color: var(--slate900);
     font-weight: 700;
-    font-size: 22px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.conversao {
+    /* background-color: bisque; */
+    /* border: solid, 2px, var(--slate900); */
+    /* box-shadow: -5px 4px 5px rgba(0, 0, 0, 0.1); */
+    padding: 0.4px 1.6rem;
+    border-top: none;
+    border-right: none;
+    border-radius: 4px;
+    color: var(--slate900);
+    font-weight: 500;
+    text-align: center;
+    width: 80%;
+}
+
+.separador-conversao {
+    margin-top: -0.8rem;
+    width: 80%;
 }
 
 hr {
     border: solid, 1px, var(--slate900);
     opacity: 0.4;
+    width: 100%;
 }
 
 #botao-fechar-modal {

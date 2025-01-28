@@ -1,0 +1,352 @@
+/* tela grande pc */
+@media (max-width: 1440px) {
+    main {
+        width: 74vw;
+    }
+
+    #formulario,
+    #resposta {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .resultadoConversao {
+        font-size: 29px;
+    }
+}
+
+/* tela media pc */
+@media (max-width: 1038px) {
+    main {
+        width: 82vw;
+    }
+
+    #formulario,
+    #resposta {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    #moedas-selecionadas {
+        font-size: 15px;
+    }
+
+    .resultadoConversao {
+        font-size: 25px;
+    }
+
+}
+
+/* tela pequena pc */
+@media (max-width: 890px) {
+    main {
+        width: 85vw;
+    }
+
+    #formulario,
+    #resposta {
+        width: 100%;
+        padding: 2rem 1.6rem;
+    }
+
+    #resposta h2 {
+        font-size: 22px;
+    }
+
+    #resposta img {
+        height: 170px;
+    }
+
+    #moedas-selecionadas {
+        font-size: 14px;
+    }
+}
+
+/* tablets grande */
+@media (max-width: 796px) {
+    main {
+        width: 87vw;
+    }
+
+    #modal {
+        width: 55vw;
+        min-width: 23rem;
+        max-height: 86vh;
+        max-height: 65vh;
+    }
+
+    #formulario,
+    #resposta {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    form {
+        gap: 1.6rem;
+    }
+
+    #historico {
+        font-size: 15px;
+    }
+
+    #resposta h2 {
+        font-size: 20px;
+        margin-bottom: 0.4rem;
+    }
+
+    #resposta img {
+        height: 150px;
+    }
+
+    .resultadoConversao {
+        font-size: 33px;
+    }
+
+    #moedas-selecionadas {
+        font-size: 12px;
+    }
+
+    form h1 {
+        font-size: 18px;
+    }
+
+    #reset {
+        font-size: 14px;
+    }
+
+    form label,
+    form select,
+    form input {
+        font-size: 15px;
+    }
+
+    #escolha-moedas div {
+        width: 45%;
+    }
+
+    #escolha-moedas select,
+    input:not(#reset) {
+        margin-top: 0.5rem;
+        font-size: 13px;
+        width: 100%;
+        padding: 0.3rem;
+    }
+
+    input#nome {
+        width: 70%;
+    }
+
+    #label-valor-moeda {
+        gap: 0.4rem;
+    }
+
+    #botoes button {
+        font-size: 13px;
+        padding: 0.1rem 0.6rem;
+        align-items: center;
+        border: solid, 2px, var(--slate700);
+        border-radius: 16px;
+        color: var(--slate900);
+    }
+
+    button {
+        padding: 0.6rem;
+    }
+}
+
+/* tablets medio */
+@media (max-width: 683px) {
+    main {
+        width: 88vw;
+    }
+
+    #modal {
+        width: 53vw;
+        min-width: 20rem;
+        max-height: 60vh;
+
+    }
+
+    .conversao {
+        font-size: 15px;
+    }
+
+    #formulario,
+    #resposta {
+        width: 100%;
+        padding: 1.6rem 1rem;
+    }
+
+    form {
+        gap: 1.2rem;
+    }
+
+    #historico {
+        font-size: 14px;
+    }
+
+    #resposta h2 {
+        font-size: 18px;
+        margin-bottom: 0.4rem;
+    }
+
+    #resposta img {
+        height: 150px;
+    }
+
+    .resultadoConversao {
+        font-size: 26px;
+    }
+
+    #moedas-selecionadas {
+        margin-top: 0.4rem;
+        font-size: 12px;
+    }
+
+    #header {
+        gap: 1px;
+    }
+
+    form h1 {
+        font-size: 16px;
+    }
+
+    #reset {
+        font-size: 13px;
+    }
+
+    form label,
+    form select,
+    form input {
+        font-size: 14px;
+    }
+
+    #escolha-moedas div {
+        width: 45%;
+    }
+
+    #escolha-moedas select,
+    input:not(#reset) {
+        margin-top: 0.5rem;
+        font-size: 12px;
+        width: 100%;
+        padding: 0.3rem;
+    }
+
+    input#nome {
+        width: 64%;
+    }
+
+
+    input#date {
+        width: 80%;
+
+    }
+
+    #botoes button {
+        font-size: 12px;
+        padding: 0.07rem 0.4rem;
+        align-items: center;
+        border: solid, 2px, var(--slate700);
+        border-radius: 16px;
+        color: var(--slate900);
+    }
+
+    button {
+        width: 50%;
+        padding: 0.5rem;
+    }
+}
+
+/* tablets pequeno */
+@media (max-width: 573px) {
+    main {
+        width: 90vw;
+    }
+
+    /* #formulario,
+    #resposta {
+        width: 100%;
+        padding: 1.6rem 1rem;
+    } */
+
+    form {
+        gap: 1rem;
+    }
+
+    #historico {
+        font-size: 13px;
+    }
+
+    #resposta h2 {
+        font-size: 16px;
+        margin-bottom: 0.4rem;
+    }
+
+    #resposta img {
+        height: 130px;
+    }
+
+    #moedas-selecionadas {
+        margin-top: 0.4rem;
+        font-size: 11px;
+    }
+
+    .resultadoConversao {
+        font-size: 26px;
+    }
+
+    #header {
+        gap: 1px;
+    }
+
+    form h1 {
+        font-size: 16px;
+    }
+
+    #reset {
+        font-size: 13px;
+    }
+
+    form label,
+    form select,
+    form input {
+        font-size: 14px;
+    }
+
+    #escolha-moedas div {
+        width: 45%;
+    }
+
+    #escolha-moedas select,
+    input:not(#reset) {
+        margin-top: 0.5rem;
+        font-size: 12px;
+        width: 100%;
+        padding: 0.3rem;
+    }
+
+    input#nome {
+        width: 64%;
+    }
+
+
+    input#date {
+        width: 80%;
+
+    }
+
+    #botoes button {
+        font-size: 12px;
+        padding: 0.07rem 0.4rem;
+        align-items: center;
+        border: solid, 2px, var(--slate700);
+        border-radius: 16px;
+        color: var(--slate900);
+    }
+
+    button {
+        width: 50%;
+        padding: 0.5rem;
+    }
+}

@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icon2/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/icon2/site.webmanifest">
     <link rel="stylesheet" href="/assets/css/pages/index/style.css">
+    <link rel="stylesheet" href="/assets/css/pages/index/partials/responsive.css">
     <base href="assets/">
 </head>
 
@@ -55,7 +56,7 @@
 
                 <div id="label-valor-moeda" class="hidden">
                     <div>
-                        <label for="nome">Valor moeda A</label>
+                        <label for="nome" id="label-moeda-A">Valor moeda A</label>
                         <input type="number" step="0.01" min="0" id="nome" name="quantidade_moeda_A" value="1.00" required>
                     </div>
                     <div id="botoes">
@@ -88,7 +89,7 @@
         <div id="background-modal" class="hidden">
             <section id="modal">
                 <h3>Conversões anteriores</h3>
-                <hr>
+                <!-- <hr> -->
                 <button type="button" id="botao-fechar-modal">Fechar</button>
             </section>
         </div>

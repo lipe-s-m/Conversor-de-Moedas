@@ -72,6 +72,10 @@ input:not(#reset):focus {
     width: 50%;
 }
 
+#label-moeda-A {
+    white-space: nowrap;
+}
+
 #label-valor-moeda {
     display: flex;
     flex-direction: row;
@@ -83,11 +87,11 @@ input:not(#reset):focus {
     display: none;
 }
 
+
 #botoes {
     display: flex;
     gap: 0.4rem;
     align-self: flex-end;
-
 }
 
 #botoes button {
