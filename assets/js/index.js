@@ -129,7 +129,9 @@ function removerOpcaoDuplicada(moedaA, moedaB) {
     moedaB.innerHTML = "";
 
     allOptionsMoedaBOriginal.forEach((valorOpcaoB) => {
-        if (valorOpcaoB.value !== opcaoMoedaA && ((opcaoMoedaA !== "JPY" && opcaoMoedaA !== "BTC" && opcaoMoedaA !== "ARS") || (valorOpcaoB.value !== "CAD" && valorOpcaoB.value !== "ARS"))) {
+        if (valorOpcaoB.value !== opcaoMoedaA && verificarOperacao(opcaoMoedaA, valorOpcaoB.value)) {
+            console.log(verificarOperacao(opcaoMoedaA, valorOpcaoB.value));
+
             const opcao = document.createElement("option");
             opcao.value = valorOpcaoB.value;
             opcao.textContent = valorOpcaoB.text;
@@ -168,6 +170,38 @@ function armazenarNoHistorico(moedaA, moedaB, nomeMoedaB, valorMoedaA, resultado
         resultadoConversao: resultado,
     }
     conversoes.push(conversao)
-
     // sessionStorage.setItem(`${conversoes.length}`, JSON.stringify(conversao));
+}
+
+function verificarOperacao(moedaA, moedaB) {
+    console.log(moedaA + " - " + moedaB);
+    switch (moedaA) {
+        case "CAD":
+            if (moedaB !== "ARS" && moedaB !== "JPY" && moedaB !== "KRW")
+                return true;
+            return false;
+        case "ARS":
+            if (moedaB !== "CAD" && moedaB !== "JPY" && moedaB !== "KRW")
+                return true;
+            return false;
+        case "JPY":
+            if (moedaB !== "CAD" && moedaB !== "ARS" && moedaB !== "KRW")
+                return true;
+            return false;
+        case "KRW":
+            if (moedaB !== "BRL" && moedaB !== "CAD" && moedaB !== "ARS" && moedaB !== "JPY")
+                return true;
+            return false;
+        case "BTC":
+            if (moedaB !== "CAD" && moedaB !== "ARS" && moedaB !== "JPY" && moedaB !== "KRW")
+                return true;
+            return false;
+        case "ETH":
+            if (moedaB !== "CAD" && moedaB !== "ARS" && moedaB !== "JPY" && moedaB !== "KRW")
+                return true;
+            return false;
+        // outras moedas
+        default:
+            return true;
+    }
 }
