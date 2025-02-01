@@ -142,20 +142,24 @@ function removerOpcaoDuplicada(moedaA, moedaB) {
 
 function funcaoSimboloMoeda(moeda) {
     switch (moeda) {
-        case "EUR":
-            return { logo: "€", nome: "Euro" };
         case "BRL":
             return { logo: "R$", nome: "Real" };
         case "USD":
             return { logo: "$", nome: "Dólar Americano" };
-        case "BTC":
-            return { logo: "BTC", nome: "Bitcoin" };
-        case "JPY":
-            return { logo: "¥", nome: "Iene" };
+        case "EUR":
+            return { logo: "€", nome: "Euro" };
         case "CAD":
             return { logo: "$", nome: "Dólar Canadense" };
         case "ARS":
             return { logo: "$", nome: "Peso Argentino" };
+        case "JPY":
+            return { logo: "¥", nome: "Iene" };
+        case "KRW":
+            return { logo: "₩", nome: "Won Sul-Coreano" };
+        case "BTC":
+            return { logo: "BTC", nome: "Bitcoin" };
+        case "ETH":
+            return { logo: "ETH", nome: "Ethereum" };
         default:
             return "que moeda é essa KKKK ";
     }
